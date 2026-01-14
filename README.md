@@ -2,3 +2,92 @@
 This section demonstrates filtering, sorting, and pagination queries
 using an astronomy observation dataset, focusing on real-world SQL patterns
 commonly used in data engineering workflows.
+# Data Engineer SQL Portfolio
+
+This repository documents my journey in building core SQL skills for Data Engineering,
+with a focus on aggregation, data quality validation, and monitoring use cases.
+
+---
+
+## 📊 Dataset: Astronomy Observations
+
+The dataset contains astronomical observation records with the following attributes:
+- object_name
+- object_type (Planet, Star, Galaxy, etc.)
+- distance_light_years
+- magnitude
+- observation_date
+
+The dataset is used to simulate real-world data engineering scenarios such as
+data validation, monitoring, and anomaly detection.
+
+---
+
+## 📅 Day 3 — Aggregation, Data Quality & Monitoring
+
+### 1️⃣ Aggregation & HAVING
+**File:** `sql/day3_having.sql`
+
+Focus:
+- GROUP BY & aggregation functions (COUNT, AVG, MIN, MAX)
+- Filtering aggregated results using HAVING
+- Identifying meaningful subsets of data after summarization
+
+Example use cases:
+- Object types with low observation counts
+- Object types with extreme brightness
+- Average distance thresholds per object type
+
+---
+
+### 2️⃣ Data Quality Checks
+**File:** `sql/day3_data_quality.sql`
+
+Focus:
+- NULL validation
+- Range validation based on domain knowledge
+- Duplicate detection
+- Logical anomaly detection
+
+Key rules implemented:
+- Distance values must not be negative
+- Magnitude values must be within a reasonable astronomical range
+- Planets should have zero distance
+- Stars should not have zero distance
+
+These checks simulate pre-processing validation commonly used in data pipelines.
+
+---
+
+### 3️⃣ Monitoring & Alerting Mini Case
+**File:** `sql/day3_monitoring_case.sql`
+
+Focus:
+- Daily activity monitoring
+- Brightness anomaly detection
+- Distribution sanity checks
+- Rule-based data quality alerts
+
+This mini case simulates how SQL is used in production environments to support
+dashboarding and alerting systems.
+
+---
+
+## 🛠️ Tools
+- PostgreSQL
+- SQL
+
+---
+
+## 🎯 Key Learnings
+- Aggregation is essential for reporting and monitoring
+- Data quality checks must be domain-driven
+- SQL is a critical tool for both analysis and operational monitoring
+- Clear reasoning behind queries is as important as correctness
+
+---
+
+## 🚀 Next Steps
+- SQL JOINs with relational datasets
+- ETL pipeline simulation
+- Data warehouse modeling
