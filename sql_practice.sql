@@ -1,2 +1,0 @@
-CREATE DATABASE sql_practice;
-
