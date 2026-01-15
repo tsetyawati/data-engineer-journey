@@ -91,3 +91,26 @@ dashboarding and alerting systems.
 - SQL JOINs with relational datasets
 - ETL pipeline simulation
 - Data warehouse modeling
+
+- 
+## 📅 Day 4 — SQL JOIN & Aggregation
+
+Day 4 focuses on combining data across multiple tables using SQL JOINs
+and analyzing the results using aggregation and HAVING clauses.
+
+### Topics Covered
+- INNER JOIN and LEFT JOIN
+- Table aliasing and join keys
+- Detecting missing metadata using LEFT JOIN
+- Normalizing placeholder values (`'N/A'` → NULL)
+- Aggregation across joined tables
+- Filtering aggregated results using HAVING
+
+### Key Use Cases
+- Identifying observations without metadata
+- Counting observations per constellation
+- Detecting active constellations based on observation volume
+- Filtering constellations by average distance thresholds
+
+These queries simulate real-world data engineering tasks such as
+data enrichment, data quality validation, and analytics-ready transformations.
