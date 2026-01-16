@@ -114,3 +114,72 @@ and analyzing the results using aggregation and HAVING clauses.
 
 These queries simulate real-world data engineering tasks such as
 data enrichment, data quality validation, and analytics-ready transformations.
+
+# Data Engineer SQL Portfolio
+
+This repository documents my learning journey toward Data Engineering,
+focusing on SQL-based data modeling, data quality validation, and ETL concepts.
+
+---
+
+## 📅 Day 5 — Mini ETL with SQL
+
+Day 5 simulates a simplified end-to-end ETL (Extract, Transform, Load) pipeline
+using SQL only, following common Data Engineering practices.
+
+### ETL Architecture
+- *RAW layer*
+  - astronomy_observations
+  - astronomy_objects
+- *CLEAN layer*
+  - clean_astronomy_observations
+- *ANALYTICS layer*
+  - analytics_constellation_summary
+
+---
+
+## 🔄 ETL Flow
+
+### 1. Raw to Clean
+- Enriched raw observation data using LEFT JOIN
+- Preserved all raw records while adding metadata
+- Standardized schema for downstream usage
+
+### 2. Data Quality Validation
+- Critical NULL checks for raw data integrity
+- Informational NULL checks for missing metadata
+- Range validation for numeric fields
+
+### 3. Clean to Analytics
+- Aggregated clean data into analytics-ready tables
+- Materialized metrics for efficient dashboard and reporting usage
+
+### 4. Monitoring & Alerting
+- Identified potential data anomalies based on observation volume thresholds
+- Designed queries to support alerting workflows
+
+---
+
+## 🧠 Key Concepts Demonstrated
+- SQL-based ETL design
+- Layered data architecture (RAW → CLEAN → ANALYTICS)
+- Safe data enrichment using LEFT JOIN
+- NULL handling and data quality checks
+- Aggregation and analytics table materialization
+- Monitoring and anomaly detection
+
+---
+
+## 🛠️ Tools
+- PostgreSQL
+- SQL
+
+---
+
+## 🚀 Next Steps
+- Incremental ETL strategies
+- SQL Window Functions
+- Pipeline orchestration concepts
+
+This portfolio reflects practical data engineering workflows
+rather than purely analytical SQL queries.
