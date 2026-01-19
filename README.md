@@ -57,6 +57,29 @@ workflows rather than isolated query exercises.
 
 ---
 
+### Day 7: CTE & CTE Chaining
+
+This section focuses on writing structured, multi-step SQL queries using
+Common Table Expressions (CTEs).
+
+Key concepts demonstrated:
+- Difference between subqueries and CTEs
+- Using CTEs to break complex logic into readable steps
+- CTE chaining for ETL-style workflows
+- Separating concerns:
+  - Base data preparation
+  - Aggregation
+  - Business rule filtering
+  - Data enrichment
+
+Example use case:
+- Identify constellations with sufficient observation volume
+- Enrich row-level data with aggregated metrics
+- Maintain clarity and maintainability in complex SQL logic
+
+This approach reflects real-world data engineering practices,
+where queries are designed to be readable, testable, and scalable.
+
 ## 🧠 Key Data Engineering Concepts Demonstrated
 - Layered data architecture
 - Safe data enrichment using LEFT JOIN
@@ -72,13 +95,6 @@ workflows rather than isolated query exercises.
 - SQL
 
 ---
-
-## 🚀 Next Learning Goals
-- Common Table Expressions (CTE)
-- Subqueries
-- Advanced ETL patterns
-- Data orchestration concepts
-- Cloud data platforms
 
 This repository reflects a learning process designed to
 prepare for a career switch into Data Engineering.
