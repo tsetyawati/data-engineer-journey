@@ -90,6 +90,28 @@ where queries are designed to be readable, testable, and scalable.
 
 ---
 
+### Day 8: Materialization (CTE → Analytics Table)
+
+This day focuses on transforming stable query logic into
+persistent analytics tables using `CREATE TABLE AS`.
+
+Key concepts demonstrated:
+- Difference between temporary logic (CTE) and persisted data
+- When and why to materialize query results
+- Building an analytics layer from clean data
+- Safe table recreation using `DROP TABLE IF EXISTS`
+- Separation of concerns:
+  - Transformation logic
+  - Storage (analytics table)
+  - Presentation (final SELECT)
+
+Example use case:
+- Aggregate constellation-level observation metrics
+- Store results for reuse in reporting and downstream analysis
+
+This reflects a core data engineering responsibility:
+deciding when query results should become reusable data assets.
+
 ## 🛠️ Tools
 - PostgreSQL
 - SQL
