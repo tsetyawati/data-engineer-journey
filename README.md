@@ -112,6 +112,30 @@ Example use case:
 This reflects a core data engineering responsibility:
 deciding when query results should become reusable data assets.
 
+### Day 9: Incremental Materialization (Watermark-Based Loading)
+
+This day focuses on implementing incremental data loading
+for aggregated analytics tables.
+
+Key concepts demonstrated:
+- Difference between full refresh and incremental loading
+- Use of watermark (`last_observation_date`) to detect new data
+- Re-aggregation of new data before inserting into analytics tables
+- Maintaining consistency between row-level and aggregated-level data
+- Awareness of duplication risks when appending aggregated data
+
+Workflow overview:
+1. Identify the latest processed observation date
+2. Aggregate only newly arrived data
+3. Append results into the analytics table
+
+This approach reflects a common real-world ETL pattern where
+data pipelines process new data batches incrementally
+instead of rebuilding entire datasets.
+
+Further improvements (e.g., UPSERT / MERGE) are intentionally
+deferred to maintain conceptual clarity.
+
 ## 🛠️ Tools
 - PostgreSQL
 - SQL
