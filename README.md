@@ -136,6 +136,26 @@ instead of rebuilding entire datasets.
 Further improvements (e.g., UPSERT / MERGE) are intentionally
 deferred to maintain conceptual clarity.
 
+### Day 11: Data Quality & Monitoring
+
+This day focuses on implementing practical data quality checks
+from a data engineering perspective.
+
+Key concepts demonstrated:
+- Differentiating between blocking errors and monitoring-only flags
+- Applying COUNT-based logic to detect missing values, duplicates, and anomalies
+- Using HAVING instead of WHERE for aggregation-based conditions
+- Designing quality checks that do not unnecessarily stop pipelines
+- Building a lightweight monitoring layer for observability
+
+Approach:
+- Mandatory fields (e.g., object_name, observation_date) trigger hard failures
+- Metadata gaps, range anomalies, and volume spikes are flagged for monitoring
+- Monitoring queries summarize data health per observation date
+
+This reflects real-world data engineering practices where
+data imperfections are monitored, not blindly rejected.
+
 ## 🛠️ Tools
 - PostgreSQL
 - SQL
